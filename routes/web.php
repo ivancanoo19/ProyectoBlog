@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +39,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Rutas para usuarios normales
     Route::get('/user_home', [HomeController::class, 'userHome'])->name('user.home');
 });
+
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 
 require __DIR__.'/auth.php';
