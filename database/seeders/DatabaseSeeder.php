@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
         php artisan db:seed
         */
 
-
+        /*
         User::create([
             'name' => 'cano',
             'email' => 'cano123@gmail.com',
@@ -43,6 +43,22 @@ class DatabaseSeeder extends Seeder
             'email' => 'nat123@gmail.com',
             'password' => Hash::make('123456789'),
             'role' => 'admin',
+        ]);
+
+        */
+
+        User::create([
+            'name' => 'hectorbh',
+            'email' => 'hector123@gmail.com',
+            'password' => bcrypt('987654321'),
+            'role' => 'normal',
+        ]);
+
+        User::create([
+            'name' => 'brend77',
+            'email' => 'brend123@gmail.com',
+            'password' => bcrypt('987654321'),
+            'role' => 'normal',
         ]);
     }
 }
