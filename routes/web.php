@@ -48,7 +48,7 @@ Route::get('/nacionales', [PostController::class, 'nacionales'])->name('posts.na
 Route::get('/internacionales', [PostController::class, 'internacionales'])->name('posts.internacionales');
 
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
-Route::get('/posts/{id}', [PostController::class, 'showN'])->name('normal.showN');
+Route::get('/postsN/{id}', [PostController::class, 'showN'])->name('normal.showN');
 
 
 Route::get('/extras/musica', [PostController::class, 'musica'])->name('extras.musica');
