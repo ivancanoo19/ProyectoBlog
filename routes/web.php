@@ -48,9 +48,14 @@ Route::get('/nacionales', [PostController::class, 'nacionales'])->name('posts.na
 Route::get('/internacionales', [PostController::class, 'internacionales'])->name('posts.internacionales');
 
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/{id}', [PostController::class, 'showN'])->name('normal.showN');
 
 
 Route::get('/extras/musica', [PostController::class, 'musica'])->name('extras.musica');
+Route::get('/normal/musicaN', [PostController::class, 'musicaN'])->name('normal.musicaN');
+
+Route::get('/nacionalesN', [PostController::class, 'nacionalesN'])->name('normal.nacionalesN');
+Route::get('/internacionalesN', [PostController::class, 'internacionalesN'])->name('normal.internacionalesN');
 
 
 require __DIR__.'/auth.php';

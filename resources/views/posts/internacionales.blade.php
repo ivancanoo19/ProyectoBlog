@@ -1,6 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            <a href="{{ route('admin.home') }}"> Inicio |</a>
             <a href="{{ route('posts.create') }}">Crear Publicación |</a>
             <a href="{{ route('extras.musica') }}"> Música |</a>
             <a href="{{ route('posts.nacionales') }}"> Nacionales |</a>
