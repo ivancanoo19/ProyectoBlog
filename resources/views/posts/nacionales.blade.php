@@ -18,7 +18,7 @@
                     @foreach($publicacionesN as $publicacion)
                         <div class="mb-4">
                             <h3 class="text-lg font-semibold">
-                                <a href="{{ route('posts.show', ['id' => $publicacion->id]) }}">
+                                <a href="{{ route('posts.show'), ['id' => $publicacion->id]) }}">
                                     {{ $publicacion->titulo }}
                                 </a>
                             </h3>
