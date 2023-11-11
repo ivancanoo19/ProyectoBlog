@@ -43,8 +43,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
-Route::get('/nacionales', [PostController::class, 'nacional'])->name('posts.nacionales');
-Route::get('/internacionales', [PostController::class, 'internacional'])->name('posts.internacionales');
+
+Route::get('/nacionales', [PostController::class, 'nacionales'])->name('posts.nacionales');
+Route::get('/internacionales', [PostController::class, 'internacionales'])->name('posts.internacionales');
+
+Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+
 
 Route::get('/extras/musica', [PostController::class, 'musica'])->name('extras.musica');
 

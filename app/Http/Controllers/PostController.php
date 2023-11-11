@@ -19,16 +19,6 @@ class PostController extends Controller
         return view('posts.index');
     }
 
-    public function nacional()
-    {
-        return view('posts.nacionales');
-    }
-
-    public function internacional()
-    {
-        return view('posts.internacionales');
-    }
-
     public function musica()
     {
         return view('extras.musica');
@@ -66,6 +56,7 @@ class PostController extends Controller
         }
     }
 
+        
     public function nacionales()
     {
         $publicacionesN = Post::where('categoria', 'nacional')->get();
@@ -77,5 +68,13 @@ class PostController extends Controller
         $publicacionesI = Post::where('categoria', 'internacional')->get();
         return view('posts.internacionales', ['publicacionesI' => $publicacionesI]);
     }
+
+    public function show($id)
+    {
+        $publicacion = Post::findOrFail($id);
+        return view('posts.show', compact('publicacion'));
+    }
+
+
 
 }

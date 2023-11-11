@@ -13,12 +13,15 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <h2 class="text-2xl font-semibold mb-4">Publicaciones Nacionales</h2>                  
+                    <h2 class="text-2xl font-semibold mb-4">Publicaciones Nacionales</h2>
                     @foreach($publicacionesN as $publicacion)
                         <div class="mb-4">
-                            <h3 class="text-lg font-semibold">{{ $publicacion->titulo }}</h3>
+                            <h3 class="text-lg font-semibold">
+                                <a href="{{ route('posts.show', ['id' => $publicacion->id]) }}">
+                                    {{ $publicacion->titulo }}
+                                </a>
+                            </h3>
                             <p class="text-sm">Publicado por: {{ $publicacion->user->name }}</p>
-                            <img src="{{ asset($publicacion->imagen) }}" alt="{{ $publicacion->titulo }}" class="w-32 h-32 object-cover rounded-md">
                         </div>
                     @endforeach
                 </div>
