@@ -100,5 +100,6 @@
         <span class="visually-hidden">Siguiente</span>
     </a>
 </div>
+
 <hr>
 </x-app-layout>
