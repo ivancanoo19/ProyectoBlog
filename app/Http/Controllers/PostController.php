@@ -24,6 +24,11 @@ class PostController extends Controller
         return view('extras.musica');
     }
 
+    public function musicaN()
+    {
+        return view('normal.musicaN');
+    }
+
     /*
     El método store permite la comunicación con la base de datos, de tal manera que el usuario,
     siempre y cuando sea administrador, a través de la vista "create" va a poder almacenar datos
@@ -63,16 +68,34 @@ class PostController extends Controller
         return view('posts.nacionales', ['publicacionesN' => $publicacionesN]);
     }
 
+    public function nacionalesN()
+    {
+        $publicacionesN = Post::where('categoria', 'nacional')->get();
+        return view('normal.nacionalesN', ['publicacionesN' => $publicacionesN]);
+    }
+
     public function internacionales()
     {
         $publicacionesI = Post::where('categoria', 'internacional')->get();
         return view('posts.internacionales', ['publicacionesI' => $publicacionesI]);
     }
 
+    public function internacionalesN()
+    {
+        $publicacionesI = Post::where('categoria', 'internacional')->get();
+        return view('normal.internacionalesN', ['publicacionesI' => $publicacionesI]);
+    }
+
     public function show($id)
     {
         $publicacion = Post::findOrFail($id);
         return view('posts.show', compact('publicacion'));
+    }
+
+    public function showN($id)
+    {
+        $publicacion = Post::findOrFail($id);
+        return view('normal.showN', compact('publicacion'));
     }
 
 

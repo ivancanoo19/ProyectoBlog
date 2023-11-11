@@ -5,12 +5,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" style="background">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
 
-        <a href="{{ route('admin.home') }}"> Inicio |</a>
-        <a href="{{ route('posts.create') }}">Crear Publicación |</a>
+        <a href="{{ route('user.home') }}"> Inicio |</a>
         <a href="{{ route('extras.musica') }}"> Música |</a>
         <a href="{{ route('posts.nacionales') }}"> Nacionales |</a>
         <a href="{{ route('posts.internacionales') }}"> Internacionales |</a>
-        <a href="{{ route('posts.index') }}"> Lista publicaciones |</a>
 
     </h2>
     </x-slot>

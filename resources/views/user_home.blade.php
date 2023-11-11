@@ -1,11 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-        <a href="{{ route('extras.musica') }}"> Música |</a>
-        <a href="{{ route('posts.nacionales') }}"> Nacionales |</a>
-        <a href="{{ route('posts.internacionales') }}"> Internacionales |</a>
-        <a href="{{ route('posts.index') }}"> Lista publicaciones |</a>
-
+        <a href="{{ route('user.home') }}"> Inicio |</a>
+        <a href="{{ route('normal.musicaN') }}"> Música |</a>
+        <a href="{{ route('normal.nacionalesN') }}"> Nacionales |</a>
+        <a href="{{ route('normal.internacionalesN') }}"> Internacionales |</a>
     </h2>
         
     </x-slot>

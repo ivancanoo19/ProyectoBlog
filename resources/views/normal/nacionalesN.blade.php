@@ -1,12 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            <a href="{{ route('admin.home') }}"> Inicio |</a>
-            <a href="{{ route('posts.create') }}">Crear Publicación |</a>
-            <a href="{{ route('extras.musica') }}"> Música |</a>
-            <a href="{{ route('posts.nacionales') }}"> Nacionales |</a>
-            <a href="{{ route('posts.internacionales') }}"> Internacionales |</a>
-            <a href="{{ route('posts.index') }}"> Lista publicaciones |</a>
+            <a href="{{ route('user.home') }}"> Inicio |</a>
+            <a href="{{ route('normal.musicaN') }}"> Música |</a>
+            <a href="{{ route('normal.nacionalesN') }}"> Nacionales |</a>
+            <a href="{{ route('normal.internacionalesN') }}"> Internacionales |</a>
         </h2>
     </x-slot>
 
@@ -18,7 +16,7 @@
                     @foreach($publicacionesN as $publicacion)
                         <div class="mb-4">
                             <h3 class="text-lg font-semibold">
-                                <a href="{{ route('posts.show', ['id' => $publicacion->id]) }}">
+                                <a href="{{ route('normal.showN', ['id' => $publicacion->id]) }}">
                                     {{ $publicacion->titulo }}
                                 </a>
                             </h3>
