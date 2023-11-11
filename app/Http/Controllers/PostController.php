@@ -18,6 +18,21 @@ class PostController extends Controller
         return view('posts.index');
     }
 
+    public function nacionales()
+    {
+        return view('posts.nacionales');
+    }
+
+    public function internacionales()
+    {
+        return view('posts.internacionales');
+    }
+
+    public function musica()
+    {
+        return view('extras.musica');
+    }
+
     /*
     El método store permite la comunicación con la base de datos, de tal manera que el usuario,
     siempre y cuando sea administrador, a través de la vista "create" va a poder almacenar datos
