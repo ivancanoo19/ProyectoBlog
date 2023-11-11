@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
 
 class PostController extends Controller
 {
@@ -18,12 +19,12 @@ class PostController extends Controller
         return view('posts.index');
     }
 
-    public function nacionales()
+    public function nacional()
     {
         return view('posts.nacionales');
     }
 
-    public function internacionales()
+    public function internacional()
     {
         return view('posts.internacionales');
     }
@@ -59,11 +60,22 @@ class PostController extends Controller
                 'categoria' => $request->categoria,
             ]);
 
-            return redirect()->route('posts.index')->with('mensaje', 'Publicación creada exitosamente');
+            return redirect()->route('admin.home')->with('mensaje', 'Publicación creada exitosamente');
         } else {
             return redirect()->route('login')->with('mensaje', 'Inicia sesión como administrador para crear publicaciones');
         }
     }
 
+    public function nacionales()
+    {
+        $publicacionesN = Post::where('categoria', 'nacional')->get();
+        return view('posts.nacionales', ['publicacionesN' => $publicacionesN]);
+    }
+
+    public function internacionales()
+    {
+        $publicacionesI = Post::where('categoria', 'internacional')->get();
+        return view('posts.internacionales', ['publicacionesI' => $publicacionesI]);
+    }
 
 }

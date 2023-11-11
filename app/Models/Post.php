@@ -17,4 +17,9 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function scopeCategoria($query, $categoria)
+    {
+        return $query->where('categoria', $categoria);
+    }
+
 }
