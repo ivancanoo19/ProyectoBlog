@@ -16,7 +16,7 @@
                     <h2 class="text-2xl font-semibold mb-4">{{ $publicacion->titulo }}</h2>
                     <p class="text-sm">Publicado por: {{ $publicacion->user->name }}</p>
                     <p class="text-sm">{{ $publicacion->descripcion }}</p>
-                    <img src="" alt="">
+                    <img src="{{ asset('./public/imagenes/' . $publicacion->imagen) }}" class="img-fluid" alt="{{ $publicacion->titulo }}">
                 </div>
             </div>
         </div>

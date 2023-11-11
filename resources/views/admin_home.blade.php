@@ -85,7 +85,7 @@
             <img src="./imagenes/luismi.jpg" class="d-block w-50 mx-auto" alt="">
         </div>
         <div class="carousel-item">
-            <img src="./imagenes/sidhartha.jpeg" class="d-block w-50 mx-auto" alt="">
+            <img src="./imagenes/siddhartha.jpeg" class="d-block w-50 mx-auto" alt="">
         </div>
         <div class="carousel-item">
             <img src="./imagenes/aitana.jpg" class="d-block w-50 mx-auto" alt="">
@@ -100,5 +100,6 @@
         <span class="visually-hidden">Siguiente</span>
     </a>
 </div>
+
 <hr>
 </x-app-layout>
